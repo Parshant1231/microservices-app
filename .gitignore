@@ -1,0 +1,22 @@
+# Node
+node_modules/
+npm-debug.log
+
+# Environment
+.env
+
+# Docker
+*.log
+docker-data/
+pgdata/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Build
+frontend/build/
