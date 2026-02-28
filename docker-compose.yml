@@ -2,11 +2,11 @@ version: '3.8'
 
 services:
 
-frontend:
-  image: kanvit279/micro-frontend:latest  # ← changed
-  restart: always
-  networks:
-    - app-network
+  frontend:
+    image: kanvit279/micro-frontend:latest  # ← changed
+    restart: always
+    networks:
+      - app-network
 
 
 
