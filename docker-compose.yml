@@ -2,15 +2,16 @@ version: '3.8'
 
 services:
 
-  frontend:
-    build: ./frontend
-    restart: always
-    networks:
-      - app-network
+frontend:
+  image: kanvit279/micro-frontend:latest  # ← changed
+  restart: always
+  networks:
+    - app-network
+
 
 
   backend:
-    build: ./backend
+    image: yourdockerhubusername/myapp-backend:latest 
     restart: always
     environment:
       DB_HOST: postgres
@@ -39,7 +40,7 @@ services:
       POSTGRES_DB: appdb
       
     volumes:
-      - pgdata:/var/lib/postresql/data
+      - pgdata:/var/lib/postgresql/data
     networks:
       - app-network
 
